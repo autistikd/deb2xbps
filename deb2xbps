@@ -338,5 +338,5 @@ if [ "${XDEB_REFUSE}" = true ]; then
 elif [ "${XDEB_OPT_INSTALL}" = true ]; then
 	"$(command -v sudo doas 2>/dev/null | head -n1)" xbps-install -R "${XDEB_BINPKGS#"${PWD}/"}" "${out}"
 else
-	log_info "Install using \`xbps-install -R ${XDEB_BINPKGS#"${PWD}/"} ${out}\`"
+	log_info "Install using \`sudo xbps-install -R ${XDEB_BINPKGS#"${PWD}/"} ${out}\`"
 fi
